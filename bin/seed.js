@@ -3,8 +3,6 @@ const Gem = require('../models/Gem.model');
 
 const MONGO_URI = process.env.MONGODB_URI;
 
-// const MONGO_URI = process.env.MONGODB_URI;
-
 const gems = [
   {
     gemName: 'Coffee',
