@@ -23,7 +23,12 @@
     </div>
     <div>
       <label class='label' for='category'>Category: </label>
-      <input class='create-input' id='category' type='text' name='category' required='true' />
+      <select class='create-input' name='category' id='category' required>
+        <option value=''>--Choose a category--</option>
+        <option value='Food & Drink'>Food & Drink</option>
+        <option value='Outdoor Activity'>Outdoor Activity</option>
+        <option value='Historical Site'>Historical Site</option>
+      </select>
     </div>
     <div>
       <label class='label' for='createdBy'>Created By:</label>
@@ -34,4 +39,6 @@
       <button class='create-btn' type='submit'>Submit</button>
     </div>
   </form>
+
+
 </div>
