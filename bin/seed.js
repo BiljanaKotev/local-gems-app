@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Gem = require('../models/Gem.model');
 
-const MONGO_URI = process.env.MONGODB_URI
+const MONGO_URI = process.env.MONGODB_URI;
 
 // const MONGO_URI = process.env.MONGODB_URI;
 
@@ -12,7 +12,7 @@ const gems = [
     location: 'Ohrid',
     venueName: 'Steve Cafe',
     imgUrl: 'https://i.postimg.cc/yNyfzvdX/coffee.jpg',
-    category: 'drink',
+    category: 'Food & Drink',
     createdby: 'Biljana',
   },
   {
@@ -21,7 +21,7 @@ const gems = [
     location: 'Ohrid',
     venueName: 'Ancient Theatre of Ohrid',
     imgUrl: 'https://i.postimg.cc/RhjdbQ7W/amphitheater.jpg',
-    category: 'historical site',
+    category: 'Historical Site',
     createdby: 'Sara',
   },
   {
@@ -30,7 +30,7 @@ const gems = [
     location: 'Ohrid',
     venueName: 'SUP Club Ohrid',
     imgUrl: 'https://i.postimg.cc/6qjrDVCr/sups.png',
-    category: 'water activity',
+    category: 'Outdoor Activity',
     createdby: 'Goce',
   },
   {
@@ -39,7 +39,7 @@ const gems = [
     location: 'Madrid',
     venueName: 'Flamenco Ramblas',
     imgUrl: 'https://i.postimg.cc/J0pVj6SC/flamenco-madrid.jpg',
-    category: 'entertainment',
+    category: 'Entertainment',
     createdby: 'Maria',
   },
   {
@@ -48,7 +48,7 @@ const gems = [
     location: 'Madrid',
     venueName: 'Wine and Tapas',
     imgUrl: 'https://i.postimg.cc/d36krFqQ/wine-tapas-madrid.jpg',
-    category: 'food',
+    category: 'Food & Drink',
     createdby: 'Mateo',
   },
   {
@@ -57,13 +57,13 @@ const gems = [
     location: 'Madrid',
     venueName: 'Restaurante Rodriguez',
     imgUrl: 'https://i.postimg.cc/85x0R8zv/paella-madrid.png',
-    category: 'food',
+    category: 'Food & Drink',
     createdby: 'Diego',
   },
 ];
 
 mongoose
-  .connect("mongodb+srv://agustin2:1234@cluster1.hyph5r4.mongodb.net/local-gems"  )
+  .connect('mongodb+srv://agustin2:1234@cluster1.hyph5r4.mongodb.net/local-gems')
   .then((x) => {
     console.log(`Connected to Mongo database: "${x.connections[0].name}"`);
 
@@ -83,3 +83,4 @@ mongoose
   .catch((err) => {
     console.log(`An error occurred while creating gems from the DB: ${err}`);
   });
+

@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 
 const { Schema, model } = require('mongoose');
 
+const categories = ['Food & Drink', 'Outdoor Activity', 'Entertainment', 'Historical Site'];
+
 const gemSchema = new Schema(
   {
     gemName: {
@@ -30,6 +32,10 @@ const gemSchema = new Schema(
     category: {
       type: String,
       required: true,
+      enum: {
+        values: categories,
+        message: 'Category is not valid',
+      },
     },
     createdBy: { type: Schema.Types.ObjectId, ref: 'User' },
   },
@@ -41,3 +47,4 @@ const gemSchema = new Schema(
 const Gem = model('Gem', gemSchema);
 
 module.exports = Gem;
+

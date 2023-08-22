@@ -93,7 +93,6 @@ router.get('/userProfile', (req, res) => {
           console.log(err);
         });
     })
-
     .catch((err) => {
       console.log(err);
     });
@@ -113,7 +112,6 @@ router.post('/userProfile', fileUploader.single('profileUrl'), (req, res) => {
     .catch((error) => console.log(`Error while creating a new user profile: ${error}`));
 });
 
-
 // added createdBy object for rendering gem on userProfile
 router.get('/userProfile', (req, res) => {
   const currentUser = req.session.currentUser;
@@ -132,7 +130,6 @@ router.post('/gems/:id/delete', (req, res) => {
   const currentUser = req.session.currentUser;
   Gem.findOne({ _id: req.params.id, createdBy: currentUser._id })
     .then((gem) => {
-      console.log(gem);
       if (!gem) {
         res.redirect('/userProfile');
         return;
@@ -167,13 +164,11 @@ router.get('/userProfile', (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
-  console.log('hi');
   req.session.destroy();
 
   req.app.locals.signedInUser = null;
   res.redirect('/');
 });
 
-
-
 module.exports = router;
+

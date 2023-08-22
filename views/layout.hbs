@@ -22,24 +22,24 @@
   <body id='body'>
 
     <nav class='nav-bar' id='nav-bar'>
-      <a href='/'> <img class='logo' src='https://i.postimg.cc/3J3gxSrr/local-gems-update-3-no-bg.png' alt='logo' /></a>
+      <a href='/'> <img class='logo' src='https://i.postimg.cc/2jdXhqKP/Black-Simple-Circle-Typography-Fashion-Logo-1.png' alt='logo' /></a>
       <ul class='nav-ul' id='nav-ul'>
-        <li><a class='click-nav' href='/'>Home</a></li>
-        <li><a class='click-nav' href='/main'>Local Gems</a></li>
 
         {{#if userInSession}}
 
-          <li><a class='click-nav' href='/userProfile'> Profile</a></li>
-          <li><a class='click-nav' href='/create'>Create</a></li>
+          <li><a href='/main'>Local Gems</a></li>
+          <li><a href='/userProfile'> Profile</a></li>
+          <li><a href='/create'>Create</a></li>
           <li>
             <form action='/logout' method='POST'>
               <button id='logout-btn'>Logout</button>
-            </form></li>
+            </form>
+          </li>
 
         {{/if}}
         {{#unless userInSession}}
-          <li> <a class='click-nav' href='/signup'>Signup</a></li>
-          <li><a class='click-nav' href='/login'>Login</a></li>
+          <li> <a class='home-btn signup-btn' href='/signup'>Signup</a></li>
+          <li><a class='home-btn login-btn' href='/login'>Login</a></li>
         {{/unless}}
 
       </ul>
@@ -55,6 +55,7 @@
     </nav>
 
     {{{body}}}
+    <footer class='text-center'>Designed and Coded by Biljana Kotevska Open Source </footer>
 
     <script src='/js/script.js'></script>
     <script
@@ -64,5 +65,6 @@
     ></script>
 
   </body>
+
 
 </html>
