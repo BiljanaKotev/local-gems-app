@@ -1,8 +1,17 @@
-const app = require("./app");
-
-// ℹ️ Sets the PORT for our app to have access to it. If no env has been set, we hard code it to 3000
+const app = require('./app');
 const PORT = process.env.PORT || 3000;
 
-app.listen(PORT, () => {
+// app.listen(PORT, () => {
+//   console.log(`Server listening on http://localhost:${PORT}`);
+// });
+
+const server = app.listen(PORT, () => {
   console.log(`Server listening on http://localhost:${PORT}`);
 });
+
+process.once('SIGUSR2', function () {
+  server.close(function () {
+    process.kill(process.pid, 'SIGUSR2');
+  });
+});
+

@@ -14,6 +14,7 @@ const mobileCloseBtn = document.getElementById('mobile-close');
 const mobileCloseMenu = document.querySelector('.mobile-close');
 const navUl = document.getElementById('nav-ul');
 const navBarContainer = document.getElementById('nav-bar');
+const profileSubmitBtn = document.getElementById('profile-submit-btn');
 
 function clickMobileBar() {
   mobileBarMenu.classList.toggle('active');
@@ -30,7 +31,6 @@ mobileCloseBtn.addEventListener('click', clickMobileBar);
 
 fetch('/userInSession')
   .then((response) => {
-    console.log(response);
     return response.json();
   })
   .then((data) => {
@@ -59,3 +59,13 @@ function closePopUp() {
   overlay.classList.remove('active');
 }
 popUpClose.addEventListener('click', closePopUp);
+
+// About me function
+
+function aboutMeInfo() {
+  console.log('works');
+  console.log(profileSubmitBtn);
+}
+
+profileSubmitBtn.addEventListener('click', aboutMeInfo);
+

@@ -7,12 +7,10 @@
   <img src="public/images/local-gems-main-screenshot.png?raw=true" alt="Desktop Screenshot" title="Desktop Screenshot" width="500">
 </div>
 
-
-
-
 # Deployed site link
-https://local-gems.cyclic.app/
- 
+
+https://localgems.cyclic.cloud
+
 Local Gems is your community's digital treasure map, uncovering the hidden gems and unique delights right in your neighborhood.
 
 - Simply plug in the name and city of the local charm you're on the hunt for.
@@ -21,20 +19,20 @@ Local Gems is your community's digital treasure map, uncovering the hidden gems 
 
 # Technologies in use / Tech Stack / Built with
 
-  - Node.js
-  - Express
-  - MongoDB
+- Node.js
+- Express
+- MongoDB
 
 # Installation
 
 To install local-gems locally, please follow the steps below:
-  - Clone repo to your machine
-  - Open the root of the project and install all dependencies with `npm i` / `yarn`
-  - Project has various scripts to run:
-    -  `node seed.js` - (cd into the bin folder first and run this command)
-    - `npm run dev` - running local version
-  
-      
+
+- Clone repo to your machine
+- Open the root of the project and install all dependencies with `npm i` / `yarn`
+- Project has various scripts to run:
+  - `node seed.js` - (cd into the bin folder first and run this command)
+  - `npm run dev` - running local version
+
 **Mongo atlas account** :
 **Step 1 | Create a MongoDB Atlas Account**
 
@@ -47,7 +45,6 @@ To install local-gems locally, please follow the steps below:
 
     You’ll receive an email with the verification link. Click the verification link inside the email to complete your registration.
     Check the visual
-
 
 **Step 2 | Create a MongoDB Atlas Cluster**
 
@@ -73,7 +70,6 @@ To install local-gems locally, please follow the steps below:
 
     It can take up to 10 minutes for your cluster to provision and become ready to use.
     Check the visual
-
 
 **Step 3 | Configure the Atlas Cluster**
 
@@ -108,17 +104,15 @@ Navigate to https://cloudinary.com/ and create your account.
 
 **Configuration**
 
- Go to the terminal and run this command:
+Go to the terminal and run this command:
 
 $ npm install cloudinary multer multer-storage-cloudinary
 
-Now  go to the .env file and paste the values from your Cloudinary account
+Now go to the .env file and paste the values from your Cloudinary account
 
 # we should add the following
 
 <img src="public/images/cloudinary-env-info.png?raw=true" alt="Desktop Screenshot" title="Desktop Screenshot">
-
-
 
 # What have we learned
 
@@ -132,16 +126,10 @@ Now  go to the .env file and paste the values from your Cloudinary account
 
 All in all, this project has been an amazing learning experience in our coding journey. Thanks for stopping by to learn more about it!
 
-
 # What issues have we faced and how we resolved them
 
 One of our primary hurdles was mastering version control with GitHub. Initially, tasks like pulling, pushing, and merging our local branches with the remote ones proved to be challenging. However, with time and practice, we got the hang of it, streamlining our collaborative efforts and ensuring smooth project progression.
 
 # Source
 
-This project is done as part of the Ironhack Full Stack Development Bootcamp Curriculum. 
-
-
-
-
-
+This project is done as part of the Ironhack Full Stack Development Bootcamp Curriculum.
