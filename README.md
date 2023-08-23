@@ -1,10 +1,7 @@
 # local-gems
 
 <div>
-    <img src="public/images/local-gems.cyclic.app-desktop.png?raw=true" alt="Desktop Screenshot" title="Desktop Screenshot" width="500" height="500" style="object-fit: cover;">
-</div>
-<div>
-  <img src="public/images/local-gems-main-screenshot.png?raw=true" alt="Desktop Screenshot" title="Desktop Screenshot" width="500">
+  <img src="public/images/local-gems-screenshot.png?raw=true" alt="Desktop Screenshot" title="Desktop Screenshot" width="500">
 </div>
 
 # Deployed site link
