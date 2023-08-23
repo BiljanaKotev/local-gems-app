@@ -1,24 +1,25 @@
-<div class='margin-top-150' id='profile-page'>
+<div class='profile-upload-container margin-top-150'>
 
   {{#if userInSession}}
 
     <form class='profile-form' action='/userProfile' method='post' enctype='multipart/form-data'>
       <h2 class='text-center mb-5 pt-5'>Welcome, {{userInSession.username}}!</h2>
       <div class='user-profile-container'>
-        <div class='upload-img-container'>
+        <div class='upload-img-container me-4'>
           <img class='img-fluid profile-img' src='{{userInSession.imgProfile}}' alt='profile image' />
-          <label class='mb-2 mt-3' for='imgUrl'> Upload Profile Picture</label>
-          <input id='imgUrl' type='file' name='profileUrl' />
+          <label class='mb-2 mt-3 text-center' for='imgUrl'> Upload Profile Picture</label>
+          <input class='custom-file-input mt-3' id='imgUrl' type='file' name='profileUrl' />
         </div>
         <div class='about-me-container'>
           <textarea name='description' id='' cols='30' rows='10'></textarea>
-          <h3>About me</h3>
-          <button class='mt-3 profile-submit-btn' id='profile-submit-btn'>Confirm details</button>
+          <h3 class='about-me-heading mt-3 text-center'>About me</h3>
+          <button class='mt-3 confirm-btn' id='profile-submit-btn'>Confirm details</button>
         </div>
       </div>
+
     </form>
 
-    <h3 class='mt-5 mb-5 ms-3' id=''>Your uploaded gems:</h3>
+    <h3 class='mt-5 mb-5 ms-3 text-center'>Your uploaded gems:</h3>
     <div class='profile-upload text-center' id='up-gems'>
       {{#each gems}}
         <div class='text-center profile-upload-info'>

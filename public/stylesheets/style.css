@@ -74,6 +74,7 @@ nav {
   border-radius: 50px;
   color: white;
   font-size: 22px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .home-btn {
@@ -98,12 +99,11 @@ nav {
   border: none;
   padding: 15px 25px;
   border-radius: 50px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   text-decoration: none;
 }
 
 .nav-ul a:hover {
-  color: rgba(255, 255, 255, 0.7);
+  background: linear-gradient(to bottom, #ff6a7d, #ff9440);
 }
 
 .local-gems-link {
@@ -473,6 +473,7 @@ main {
   display: flex;
   padding: 25px;
   justify-content: center;
+  align-items: center;
 }
 
 .upload-img-container,
@@ -500,6 +501,55 @@ main {
   margin-bottom: 50px;
 }
 
+.custom-file-input {
+  width: 125px;
+  margin: 0 auto;
+}
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  content: 'Choose file';
+  color: #ffffff;
+  display: inline-block;
+  background: #333;
+  border-radius: 5px;
+  padding: 5px 8px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active {
+  outline: 0;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+}
+textarea {
+  border-radius: 5px;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+
+.about-me-heading {
+  font-size: 16px;
+  font-weight: initial;
+}
+
+.confirm-btn {
+  width: 125px;
+  white-space: nowrap;
+  margin: 0 auto;
+  background: #333;
+  color: white;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 5px;
+}
+
 /* login forms page */
 
 .login-form,
@@ -514,8 +564,6 @@ main {
 .signup-input {
   display: block;
 }
-
-/* signup forms page */
 
 footer {
   background: #333;
@@ -553,13 +601,6 @@ footer {
     right: 0;
     line-height: 2;
   }
-
-  /* .signup-btn.active,
-  .login-btn.active,
-  .local-gems-link.active {
-    background: initial;
-    box-shadow: none;
-  } */
 
   .nav-ul a.active {
     background: initial;
@@ -647,6 +688,14 @@ footer {
   }
   .upload-img-container {
     align-items: center;
+  }
+
+  .profile-upload-container {
+    margin-top: 75px;
+  }
+
+  textarea {
+    margin-top: 25px;
   }
 }
 
