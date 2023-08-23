@@ -644,6 +644,9 @@ footer {
     flex-direction: column;
     align-items: center;
   }
+  .upload-img-container {
+    align-items: center;
+  }
 }
 
 @media (min-width: 600px) {
