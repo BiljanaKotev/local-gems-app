@@ -98,6 +98,10 @@ nav {
   color: rgba(255, 255, 255, 0.7);
 }
 
+.local-gems-link {
+  display: none;
+}
+
 .mobile-menu {
   display: none;
 }
@@ -503,16 +507,20 @@ h5 {
 
 /* login forms page */
 
-.login-form {
+.login-form,
+.signup-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.login-input {
+.login-input,
+.signup-input {
   display: block;
 }
+
+/* signup forms page */
 
 footer {
   background: #333;
@@ -549,6 +557,17 @@ footer {
     padding-top: 75px;
     right: 0;
     line-height: 2;
+  }
+
+  .signup-btn.active,
+  .login-btn.active,
+  .local-gems-link.active {
+    background: initial;
+    box-shadow: none;
+  }
+
+  .local-gems-link {
+    display: block;
   }
 
   .main-form-container {
@@ -621,6 +640,10 @@ footer {
     margin: auto;
     width: auto;
   }
+  .user-profile-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 @media (min-width: 600px) {
@@ -657,4 +680,3 @@ footer {
     font-size: 20px;
   }
 }
-
