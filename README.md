@@ -1,7 +1,7 @@
 # local-gems
 
 <div>
-  <img src="public/images/local-gems-screenshot.png?raw=true" alt="Desktop Screenshot" title="Desktop Screenshot" width="500">
+  <img src="public/images/local-gems-screenshot-hp.png?raw=true" alt="Desktop Screenshot" title="Desktop Screenshot" width="500">
 </div>
 
 # Deployed site link
