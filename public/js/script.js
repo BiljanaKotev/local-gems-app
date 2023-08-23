@@ -15,17 +15,16 @@ const mobileCloseMenu = document.querySelector('.mobile-close');
 const navUl = document.getElementById('nav-ul');
 const navBarContainer = document.getElementById('nav-bar');
 const profileSubmitBtn = document.getElementById('profile-submit-btn');
-const signupBtn = document.querySelector('.signup-btn');
-const loginBtn = document.querySelector('.login-btn');
-const localGemsLink = document.querySelector('.local-gems-link');
+const navLinks = document.querySelectorAll('.nav-ul a');
 
 function clickMobileBar() {
   mobileBarMenu.classList.toggle('active');
   mobileCloseMenu.classList.toggle('active');
-  signupBtn.classList.toggle('active');
-  loginBtn.classList.toggle('active');
-  localGemsLink.classList.toggle('active');
   navUl.classList.toggle('active');
+  navLinks.forEach((navLinks) => {
+    navLinks.classList.toggle('active');
+  });
+
   if (navUl.style.display === 'block') {
     navUl.style.display = 'none';
   } else {

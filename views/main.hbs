@@ -1,7 +1,7 @@
-<div class=''>
+<div class='margin-top-150'>
   <form class='main-form-container' id='main-form' action='/search' method='GET'>
     <div class='search-input-container'>
-      <input class='search-input text-start' id='search-input' type='text' name='localGem' placeholder='Search for local gem' required />
+      <input class='search-input text-start mt-5' id='search-input' type='text' name='localGem' placeholder='Search for local gem' required />
       <i class='fa-solid fa-magnifying-glass fa-2x search-icon'></i>
     </div>
     <select class='search-input' name='location' id='location-select' required>
@@ -16,24 +16,6 @@
     <div>
       <button class='search-btn' id='location-btn' type='submit'>Submit</button>
     </div>
-
-    {{! <!-- Filter Section -->
-    <div id='filter-section'>
-      <h5>Filter By Category:</h5>
-      <div class='checkbox-group'>
-        <input type='checkbox' id='filter1' name='filter1' />
-        <label for='filter1'>Food & Drink </label>
-      </div>
-      <div class='checkbox-group'>
-        <input type='checkbox' id='filter2' name='filter2' />
-        <label for='filter2'>Filter Option 2</label>
-      </div>
-      <div class='checkbox-group'>
-        <input type='checkbox' id='filter3' name='filter3' />
-        <label for='filter3'>Filter Option 3</label>
-      </div>
-    </div> }}
-
   </form>
 </div>
 
@@ -83,6 +65,5 @@
 
   </div>
   <div class='overlay'></div>
-
 
 </div>

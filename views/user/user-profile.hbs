@@ -1,9 +1,9 @@
-<div id='profile-page'>
+<div class='margin-top-150' id='profile-page'>
 
   {{#if userInSession}}
 
     <form class='profile-form' action='/userProfile' method='post' enctype='multipart/form-data'>
-      <h2 class='text-center mb-5'>Welcome, {{userInSession.username}}!</h2>
+      <h2 class='text-center mb-5 pt-5'>Welcome, {{userInSession.username}}!</h2>
       <div class='user-profile-container'>
         <div class='upload-img-container'>
           <img class='img-fluid profile-img' src='{{userInSession.imgProfile}}' alt='profile image' />

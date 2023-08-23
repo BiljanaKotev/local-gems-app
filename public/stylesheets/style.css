@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.margin-top-150 {
+  margin-top: 150px;
+}
+
 /* Layout Page */
 
 body {
@@ -34,9 +38,10 @@ nav {
 }
 
 .nav-bar {
-  position: relative;
-  z-index: 1;
+  /* position: relative;
+  z-index: 1; */
   top: 0;
+  position: fixed;
 }
 
 .nav-ul,
@@ -50,9 +55,12 @@ nav {
   list-style: none;
   display: flex;
   justify-content: end;
+  align-items: center;
   gap: 25px;
   font-size: 20px;
-  position: absolute;
+  position: fixed;
+  background: white;
+  z-index: -5;
   right: 0px;
   left: 0px;
   margin-right: 50px;
@@ -114,7 +122,6 @@ nav {
 .heading-container {
   margin-bottom: 100px;
   background: linear-gradient(to bottom, #ff6a7d, #ff9440);
-
   color: white;
 }
 
@@ -136,18 +143,6 @@ main {
 .homepage-icon {
   font-size: 30px;
   color: #333;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
-}
-
-h1,
-h5 {
-  margin: 0;
 }
 
 .heading-container {
@@ -228,7 +223,7 @@ h5 {
 
 .main-heading-container {
   margin-top: 75px;
-  position: relative;
+  /* position: relative; */
 }
 
 .main-heading {
@@ -284,7 +279,7 @@ h5 {
 
 .search-icon {
   position: absolute;
-  top: 50%;
+  top: 65%;
 }
 
 .search-btn {
@@ -559,11 +554,17 @@ footer {
     line-height: 2;
   }
 
-  .signup-btn.active,
+  /* .signup-btn.active,
   .login-btn.active,
   .local-gems-link.active {
     background: initial;
     box-shadow: none;
+  } */
+
+  .nav-ul a.active {
+    background: initial;
+    box-shadow: none;
+    border-radius: initial;
   }
 
   .local-gems-link {
