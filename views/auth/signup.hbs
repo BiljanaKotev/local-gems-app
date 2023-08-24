@@ -1,28 +1,31 @@
-<div id='singup-form '>
+<main class='signup-bg'>
 
-  <h2 class='text-center margin-top-150 mb-5'>Signup</h2>
+  <div class='margin-top-150' id='singup-form  '>
 
-  <form class='signup-form' action='/signup' method='POST'>
+    <form class='signup-form' action='/signup' method='POST'>
+      <div class='white-bg-container'>
+        <h2 class='text-center mb-5 mt-5'>Signup</h2>
+        <div class='mb-3 d-inline-block'>
+          <label for='username'></label>
+          <input class='signup-input p-1' id='username' type='text' name='username' placeholder='Username' />
+        </div>
 
-    <div class='mb-3'>
-      <label for='username'></label>
-      <input class='signup-input p-1' id='username' type='text' name='username' placeholder='Username' />
-    </div>
+        <div class='mb-3 d-inline-block'>
+          <label for='email'></label>
+          <input class='signup-input p-1' id='email' type='email' name='email' placeholder='Email' />
+        </div>
 
-    <div class='mb-3'>
-      <label for='email'></label>
-      <input class='signup-input p-1' id type='email' name='email' placeholder='Email' />
-    </div>
+        <div class='mb-3 d-inline-block'>
+          <label for='password'></label>
+          <input class='signup-input p-1' id='password' type='password' name='password' placeholder='Password' />
+        </div>
 
-    <div class='mb-3'>
-      <label for='password'></label>
-      <input class='signup-input p-1' id='password' type='password' name='password' placeholder='Password' />
-    </div>
-
-    <button class='mt-5' type='submit'>Create account</button>
-    {{#if errorMessage}}
-      <p class='error'>{{errorMessage}}</p>
-    {{/if}}
-
-  </form>
-</div>
+        <button class='mt-5 d-block mx-auto' type='submit'>Create account</button>
+        {{#if errorMessage}}
+          <p class='error'>{{errorMessage}}</p>
+        {{/if}}
+      </div>
+    </form>
+  </div>
+  <div style='width: 100%; height: 25%;'></div>
+</main>

@@ -8,10 +8,11 @@ const fileUploader = require('../config/cloudinary.config');
 const { isLoggedIn, isLoggedOut } = require('../middleware/route-guard.js');
 const Gem = require('../models/Gem.model');
 
-router.get('/signup', (req, res) => res.render('auth/signup'));
+router.get('/signup', (req, res) => {
+  res.render('auth/signup');
+});
 
 router.post('/signup', (req, res, next) => {
-  console.log('The form data: ', req.body);
   const { username, email, password } = req.body;
   if (!username || !email || !password) {
     res.render('auth/signup', { errorMessage: 'Provide your username, email and password.' });
@@ -113,7 +114,6 @@ router.post('/userProfile', fileUploader.single('profileUrl'), (req, res) => {
     .catch((error) => console.log(`Error while creating a new user profile: ${error}`));
 });
 
-
 // added createdBy object for rendering gem on userProfile
 router.get('/userProfile', (req, res) => {
   const currentUser = req.session.currentUser;
@@ -173,7 +173,5 @@ router.post('/logout', (req, res) => {
   req.app.locals.signedInUser = null;
   res.redirect('/');
 });
-
-
 
 module.exports = router;

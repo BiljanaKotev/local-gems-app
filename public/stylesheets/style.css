@@ -65,6 +65,8 @@ nav {
   left: 0px;
   margin-right: 50px;
   font-family: 'Montserrat', sans-serif;
+  width: 100%;
+  padding: 25px 25px 50px 25px;
 }
 
 .heading-btn-link {
@@ -309,9 +311,6 @@ main {
 .heart-icon {
   cursor: pointer;
   font-size: 18px;
-  /* position: absolute;
-  top: 20px;
-  left: 80px; */
 }
 
 .heart-icon.active {
@@ -375,6 +374,24 @@ main {
 
 .label {
   display: block;
+}
+
+/* Gems Details page */
+
+.gem-details-img {
+  margin-top: 10px;
+  border-radius: initial;
+  cursor: none;
+  transition: none !important;
+}
+
+.gem-details-container {
+  text-align: center;
+  border: 1px solid black;
+  width: 270px;
+  margin: 150px auto;
+  /* border-top-right-radius: 0; */
+  border-radius: 5px;
 }
 
 /* Gems Page */
@@ -565,14 +582,32 @@ textarea {
   display: block;
 }
 
+.login-btn {
+  width: 200px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(to bottom, #ff6a7d, #ff9440);
+}
+
+/* signup-page */
+
+.signup-bg {
+  background: linear-gradient(to bottom, #ff6a7d, #ff9440);
+  border-radius: 5px;
+}
+
+.white-bg-container {
+  border-radius: 5px;
+  width: 350px;
+  height: 450px;
+  margin: 100px auto;
+  background: white;
+  text-align: center;
+}
+
 footer {
-  background: #333;
-  color: white;
-  padding: 25px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  top: 125%;
+  margin-top: 50px;
 }
 
 /* MEDIA QUERIES */
@@ -586,6 +621,7 @@ footer {
     display: none;
     top: 0;
     z-index: 0;
+    width: 100%;
   }
 
   .nav-ul.active {
@@ -612,6 +648,10 @@ footer {
     display: block;
   }
 
+  .heading-container {
+    margin-top: 75px;
+  }
+
   .main-form-container {
     flex-direction: column;
     align-items: center;
@@ -622,6 +662,14 @@ footer {
     width: 250px;
     margin: 0 auto 25px auto;
     font-size: 18px;
+  }
+
+  .gradient-container {
+    margin-top: 75px;
+  }
+
+  .search-input-container.active {
+    display: none;
   }
 
   .pop-up-close {

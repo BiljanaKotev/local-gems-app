@@ -16,6 +16,7 @@ const navUl = document.getElementById('nav-ul');
 const navBarContainer = document.getElementById('nav-bar');
 const profileSubmitBtn = document.getElementById('profile-submit-btn');
 const navLinks = document.querySelectorAll('.nav-ul a');
+const searchInputContainer = document.querySelector('.search-input-container');
 
 function clickMobileBar() {
   mobileBarMenu.classList.toggle('active');
@@ -24,6 +25,7 @@ function clickMobileBar() {
   navLinks.forEach((navLinks) => {
     navLinks.classList.toggle('active');
   });
+  searchInputContainer.classList.toggle('active');
 
   if (navUl.style.display === 'block') {
     navUl.style.display = 'none';

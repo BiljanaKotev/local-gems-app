@@ -1,4 +1,4 @@
-<div class='margin-top-150'>
+<div class='gradient-container margin-top-150'>
   <form class='main-form-container' id='main-form' action='/search' method='GET'>
     <div class='search-input-container'>
       <input class='search-input text-start mt-5' id='search-input' type='text' name='localGem' placeholder='Search for local gem' required />
@@ -37,7 +37,9 @@
             <i class='fa-regular fa-heart heart-icon' id='heart-icon'></i>
           </div>
         </div>
-        <button class='main-details-btn'>details</button>
+        <form action='/gem-details/{{this.id}}' method='GET'>
+          <button class='main-details-btn' id='gem-details'>details</button>
+        </form>
       </div>
     {{/each}}
   </div>

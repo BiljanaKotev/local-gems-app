@@ -81,4 +81,16 @@ router.get('/userInSession', (req, res) => {
   res.json({ userInSession: userInSession });
 });
 
+router.get('/gem-details/:id', (req, res) => {
+  const gemID = req.params.id;
+  Gem.findById(gemID)
+    .then((gem) => {
+      res.render('gem-details', { gem: gem });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
+
 module.exports = router;
+
