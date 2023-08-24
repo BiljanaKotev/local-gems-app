@@ -126,7 +126,8 @@ nav {
 }
 
 .heading-container {
-  margin-bottom: 100px;
+  width: 75%;
+  margin: 150px auto 100px auto;
   background: linear-gradient(to bottom, #ff6a7d, #ff9440);
   color: white;
 }
@@ -620,6 +621,7 @@ footer {
 
 footer a {
   color: #ff6a7d;
+  text-decoration: none;
 }
 
 /* MEDIA QUERIES */
