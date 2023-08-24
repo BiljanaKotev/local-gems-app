@@ -17,6 +17,8 @@ const navBarContainer = document.getElementById('nav-bar');
 const profileSubmitBtn = document.getElementById('profile-submit-btn');
 const navLinks = document.querySelectorAll('.nav-ul a');
 const searchInputContainer = document.querySelector('.search-input-container');
+const searchInput = document.getElementById('search-input');
+const locationBtn = document.getElementById('location-btn');
 
 function clickMobileBar() {
   mobileBarMenu.classList.toggle('active');
@@ -76,4 +78,22 @@ function aboutMeInfo() {
 }
 
 profileSubmitBtn.addEventListener('click', aboutMeInfo);
+
+// GEO LOCATION
+// GEO LOCATION
+function submitLocation(pos) {
+  const crd = pos.coords;
+
+  console.log('Your current position is:');
+  console.log(`Latitude : ${crd.latitude}`);
+  console.log(`Longitude: ${crd.longitude}`);
+}
+
+function error(err) {
+  console.warn(`ERROR(${err.code}): ${err.message}`);
+}
+
+locationBtn.addEventListener('click', function () {
+  navigator.geolocation.getCurrentPosition(submitLocation, error); // Removed 'options' as it's not defined in provided code
+});
 

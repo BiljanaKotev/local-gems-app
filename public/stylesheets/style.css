@@ -618,6 +618,10 @@ footer {
   margin-top: 50px;
 }
 
+footer a {
+  color: #ff6a7d;
+}
+
 /* MEDIA QUERIES */
 
 @media (max-width: 600px) {
