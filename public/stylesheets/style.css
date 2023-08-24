@@ -104,6 +104,10 @@ nav {
   text-decoration: none;
 }
 
+.nav-ul a:visited {
+  color: #333;
+}
+
 .nav-ul a:hover {
   background: linear-gradient(to bottom, #ff6a7d, #ff9440);
 }
@@ -378,11 +382,14 @@ main {
 
 /* Gems Details page */
 
-.gem-details-img {
+#gem-details-img {
   margin-top: 10px;
   border-radius: initial;
   cursor: none;
   transition: none !important;
+  width: 250px;
+  height: 250px !important;
+  object-fit: cover;
 }
 
 .gem-details-container {

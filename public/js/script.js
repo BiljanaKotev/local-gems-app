@@ -48,6 +48,7 @@ fetch('/userInSession')
     }
     function clickHeart(event) {
       if (userInSession) {
+        searchInputContainer.classList.toggle('active');
         event.target.classList.toggle('active');
         return;
       }
