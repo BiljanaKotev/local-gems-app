@@ -71,41 +71,40 @@ nav {
 
 .heading-btn-link {
   text-decoration: none;
-  background: #333;
-  padding: 15px;
-  border-radius: 50px;
   color: white;
   font-size: 22px;
+  padding: 8px 15px;
+  background: black;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border-radius: 25px;
+  margin-bottom: 50px;
+  margin-top: 25px;
+  display: inline-block;
 }
 
-.home-btn {
+/* .home-btn {
   text-decoration: none;
   background: #333;
   padding: 10px 15px;
   border-radius: 50px;
   color: white;
   font-size: 18px;
-}
+} */
 
-.heading-btn {
+/* .heading-btn {
   border: none;
   background: initial;
   margin-bottom: 50px;
   margin-top: 25px;
-}
+} */
 
 .nav-ul a {
   color: #ffffff;
   background-color: #333;
   border: none;
-  padding: 15px 25px;
+  padding: 8px 15px;
   border-radius: 50px;
   text-decoration: none;
-}
-
-.nav-ul a:visited {
-  color: #333;
 }
 
 .nav-ul a:hover {
@@ -118,6 +117,7 @@ nav {
 
 .mobile-menu {
   display: none;
+  color: #000000;
 }
 
 .mobile-menu-container {
