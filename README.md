@@ -28,7 +28,10 @@ To install local-gems locally, please follow the steps below:
 - Open the root of the project and install all dependencies with `npm i` / `yarn`
 - Project has various scripts to run:
   - `node seed.js` - (cd into the bin folder first and run this command)
-  - `npm run dev` - running local version
+  - `npm run dev` - running local version. Open http://localhost:3000 to view it in your browser.
+
+The page will reload when you make changes.
+You may also see any lint errors in the console.
 
 **Mongo atlas account** :
 **Step 1 | Create a MongoDB Atlas Account**
