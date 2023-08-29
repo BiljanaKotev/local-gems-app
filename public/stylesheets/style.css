@@ -514,6 +514,8 @@ main {
 .custom-file-input {
   width: 125px;
   margin: 0 auto;
+  display: flex;
+  white-space: break-spaces;
 }
 .custom-file-input::-webkit-file-upload-button {
   visibility: hidden;
@@ -542,6 +544,7 @@ textarea {
   width: 250px;
   height: 250px;
   object-fit: cover;
+  margin-top: -60px;
 }
 
 .about-me-heading {
@@ -746,6 +749,12 @@ footer a {
 
   textarea {
     margin-top: 25px;
+  }
+
+  .custom-file-input {
+    white-space: break-spaces;
+    display: flex;
+    width: 125px;
   }
 }
 
