@@ -1,17 +1,10 @@
 <div class='gradient-container margin-top-150'>
   <form class='main-form-container' id='main-form' action='/search' method='GET'>
+
     <div class='search-input-container'>
-      <input class='search-input text-start mt-5' id='search-input' type='text' name='localGem' placeholder='Search for local gem' required />
+      <input class='search-input text-start mt-5' id='search-input' type='text' name='city' placeholder='Enter a city name' required />
       <i class='fa-solid fa-magnifying-glass fa-2x search-icon'></i>
     </div>
-    <select class='search-input' name='location' id='location-select' required>
-      <option value=''>--Choose a location--</option>
-      <option value='Ohrid'>Ohrid</option>
-      <option value='Madrid'>Madrid</option>
-      <option value='Paris'>Paris</option>
-      <option value='London'>London</option>
-      <option value='Istanbul'>Istanbul</option>
-    </select>
 
     <div>
       <button class='search-btn' id='location-btn' type='submit'>Submit</button>

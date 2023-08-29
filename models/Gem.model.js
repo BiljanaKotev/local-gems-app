@@ -16,9 +16,16 @@ const gemSchema = new Schema(
       required: true,
       trim: true,
     },
-    location: {
+    // location: {
+    //   type: String,
+    //   required: true,
+    // },
+    geolocation: {
+      latitude: Number,
+      longitude: Number,
+    },
+    city: {
       type: String,
-      required: true,
     },
     venueName: {
       type: String,

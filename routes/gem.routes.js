@@ -17,11 +17,11 @@ router.get('/', isLoggedIn, (req, res) => {
 // added createdBy variable for rendering on userProfile functionality
 router.post('/create', fileUploader.single('imgUrl'), (req, res) => {
   console.log(req.file);
-  const { gemName, description, location, venueName, category } = req.body;
+  const { gemName, description, city, venueName, category } = req.body;
   console.log('req.session:', req.session);
   const createdBy = req.session.currentUser._id;
   let imgUrl = req.file ? req.file.path : undefined;
-  Gem.create({ gemName, description, location, venueName, imgUrl, category, createdBy })
+  Gem.create({ gemName, description, city, venueName, imgUrl, category, createdBy })
     .then(() => {
       res.redirect('/main');
     })
@@ -42,11 +42,23 @@ router.get('/main', (req, res) => {
 
 // the main search queries for gem and location
 router.get('/search', (req, res) => {
-  const { localGem, location } = req.query;
-  Gem.find({ gemName: { $regex: localGem }, location: location })
+  // const { localGem, location } = req.query;
+  // Gem.find({ gemName: { $regex: localGem }, location: location })
+  //   .then((gems) => {
+  //     if (gems.length === 0) {
+  //       res.render('main', { errorMsg: 'Sorry no local gem within that category try another search' });
+  //     } else {
+  //       res.render('gems', { gems: gems, userInSession: req.session.currentUser });
+  //     }
+  //   })
+  const city = req.query.city;
+  Gem.find({ city: new RegExp(`^${city}$`, 'i') })
+
     .then((gems) => {
+      console.log('City being searched for:', city);
+      console.log('RETRIEVED GEMS', gems);
       if (gems.length === 0) {
-        res.render('main', { errorMsg: 'Sorry no local gem within that category try another search' });
+        res.render('main', { errorMsg: 'Sorry, no gems found for the given city enetered' });
       } else {
         res.render('gems', { gems: gems, userInSession: req.session.currentUser });
       }
@@ -55,6 +67,7 @@ router.get('/search', (req, res) => {
       console.log(err);
     });
 });
+
 router.post('/gems/:id/delete', (req, res, next) => {
   const gemId = req.params.id;
 

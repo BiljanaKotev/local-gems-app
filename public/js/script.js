@@ -72,28 +72,39 @@ popUpClose.addEventListener('click', closePopUp);
 
 // About me function
 
-function aboutMeInfo() {
-  console.log('works');
-  console.log(profileSubmitBtn);
-}
+// function aboutMeInfo() {
+//   console.log('works');
+//   console.log(profileSubmitBtn);
+// }
 
-profileSubmitBtn.addEventListener('click', aboutMeInfo);
+// profileSubmitBtn.addEventListener('click', aboutMeInfo);
 
 // GEO LOCATION
-// GEO LOCATION
-function submitLocation(pos) {
-  const crd = pos.coords;
 
-  console.log('Your current position is:');
-  console.log(`Latitude : ${crd.latitude}`);
-  console.log(`Longitude: ${crd.longitude}`);
+function searchLocation() {
+  const successCallback = (position) => {
+    const latitude = position.coords.latitude;
+    const longitude = position.coords.longitude;
+    const apiUrl = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${latitude}&longitude=${longitude}&localityLanguage=en`;
+
+    axios
+      .get(apiUrl)
+      .then(function (response) {
+        console.log(response.data.city);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+
+    searchInput.value = response.data.city;
+  };
+
+  const errorCallback = (error) => {
+    console.error(error);
+  };
+
+  navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 }
 
-function error(err) {
-  console.warn(`ERROR(${err.code}): ${err.message}`);
-}
-
-locationBtn.addEventListener('click', function () {
-  navigator.geolocation.getCurrentPosition(submitLocation, error); // Removed 'options' as it's not defined in provided code
-});
+locationBtn.addEventListener('click', searchLocation);
 
