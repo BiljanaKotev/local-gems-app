@@ -70,15 +70,6 @@ function closePopUp() {
 }
 popUpClose.addEventListener('click', closePopUp);
 
-// About me function
-
-// function aboutMeInfo() {
-//   console.log('works');
-//   console.log(profileSubmitBtn);
-// }
-
-// profileSubmitBtn.addEventListener('click', aboutMeInfo);
-
 // GEO LOCATION
 
 function searchLocation() {
@@ -91,12 +82,11 @@ function searchLocation() {
       .get(apiUrl)
       .then(function (response) {
         console.log(response.data.city);
+        searchInput.value = response.data.city;
       })
       .catch(function (err) {
         console.log(err);
       });
-
-    searchInput.value = response.data.city;
   };
 
   const errorCallback = (error) => {
