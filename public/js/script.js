@@ -73,6 +73,7 @@ popUpClose.addEventListener('click', closePopUp);
 // GEO LOCATION
 
 function searchLocation() {
+  console.log('works');
   const successCallback = (position) => {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
@@ -83,6 +84,7 @@ function searchLocation() {
       .then(function (response) {
         console.log(response.data.city);
         searchInput.value = response.data.city;
+        searchInput.form.submit();
       })
       .catch(function (err) {
         console.log(err);
@@ -96,5 +98,8 @@ function searchLocation() {
   navigator.geolocation.getCurrentPosition(successCallback, errorCallback);
 }
 
-locationBtn.addEventListener('click', searchLocation);
+locationBtn.addEventListener('click', function (event) {
+  event.preventDefault();
+  searchLocation();
+});
 
