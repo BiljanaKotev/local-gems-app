@@ -73,7 +73,6 @@ popUpClose.addEventListener('click', closePopUp);
 // GEO LOCATION
 
 function searchLocation() {
-  console.log('works');
   const successCallback = (position) => {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
@@ -100,6 +99,10 @@ function searchLocation() {
 
 locationBtn.addEventListener('click', function (event) {
   event.preventDefault();
-  searchLocation();
+  if (!searchInput.value.trim()) {
+    searchLocation();
+  } else {
+    searchInput.form.submit();
+  }
 });
 
