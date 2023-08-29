@@ -133,3 +133,6 @@ One of our primary hurdles was mastering version control with GitHub. Initially,
 # Source
 
 This project is done as part of the Ironhack Full Stack Development Bootcamp Curriculum.
+
+# Helpful Links
+https://youtu.be/916M64DuRnk?si=QBfuQgOI0yXReNNu
