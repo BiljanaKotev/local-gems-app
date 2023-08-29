@@ -82,22 +82,6 @@ nav {
   display: inline-block;
 }
 
-/* .home-btn {
-  text-decoration: none;
-  background: #333;
-  padding: 10px 15px;
-  border-radius: 50px;
-  color: white;
-  font-size: 18px;
-} */
-
-/* .heading-btn {
-  border: none;
-  background: initial;
-  margin-bottom: 50px;
-  margin-top: 25px;
-} */
-
 .nav-ul a {
   color: #ffffff;
   background-color: #333;
@@ -694,6 +678,10 @@ footer a {
 
   .gem-container {
     grid-template-columns: 1fr;
+  }
+
+  .gems-searched {
+    grid-template-columns: initial;
   }
 
   .search-icon {
